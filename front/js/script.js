@@ -11,6 +11,16 @@ const listOfItems = async () => {
     console.table(articles);
     //Création d'une boucle for..in
     for (let article in articles) {
+      //lien
+      let elementLink = document.createElement("a");
+      // article
+      let elementArticle = document.createElement("article");
+      // image
+      let elementImage = document.createElement("img");
+      //h3
+      let elementTitle = document.createElement("h3");
+      //paragraphe
+      let elementParagraphe = document.createElement("p");
     }
   });
 };
