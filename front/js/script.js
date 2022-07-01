@@ -9,6 +9,9 @@ const listOfItems = async () => {
   let results = await theArticles().then(function (resultatAPI) {
     const articles = resultatAPI;
     console.table(articles);
+    //Création d'une boucle for..in
+    for (let article in articles) {
+    }
   });
 };
 listOfItems();
