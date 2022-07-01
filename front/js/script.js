@@ -8,7 +8,7 @@ const theArticles = async () => {
 const listOfItems = async () => {
   let results = await theArticles().then(function (resultatAPI) {
     const articles = resultatAPI;
-    console.log(articles);
+    console.table(articles);
   });
 };
 listOfItems();
