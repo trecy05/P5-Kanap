@@ -13,14 +13,20 @@ const listOfItems = async () => {
     for (let article in articles) {
       //lien
       let elementLink = document.createElement("a");
+      let elementItems = document.getElementById("items");
+      elementItems.appendChild(elementLink);
       // article
       let elementArticle = document.createElement("article");
+      elementLink.appendChild(elementArticle);
       // image
       let elementImage = document.createElement("img");
+      elementArticle.appendChild(elementImage);
       //h3
       let elementTitle = document.createElement("h3");
+      elementImage.appendChild(elementTitle);
       //paragraphe
       let elementParagraphe = document.createElement("p");
+      elementTitle.appendChild(elementParagraphe);
     }
   });
 };
