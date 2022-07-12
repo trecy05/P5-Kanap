@@ -39,6 +39,11 @@ const listOfItems = async () => {
       elementArticle.appendChild(elementParagraphe);
       elementParagraphe.classList.add("elementParagraphe");
       elementParagraphe.innerHTML = repAPI[i].description;
+      //Prix
+      let elementPrice = document.createElement("price");
+      elementArticle.appendChild(elementPrice);
+      elementPrice.classList.add("elementPrice");
+      elementPrice.innerHTML = repAPI[i].price;
     }
   });
 };
