@@ -20,6 +20,7 @@ const listOfItems = async () => {
       let elementLink = document.createElement("a");
       let elementItems = document.getElementById("items");
       elementItems.appendChild(elementLink);
+      elementLink.href = `product.html?id=${repAPI[i]._id}`;
       // article
       let elementArticle = document.createElement("article");
       elementLink.appendChild(elementArticle);
