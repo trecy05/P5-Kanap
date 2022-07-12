@@ -1,3 +1,8 @@
+//Reponse fetch
+fetch("http://localhost:3000/api/products").then((reponse) =>
+  console.log(reponse)
+);
+
 //Recuperation des articles sur l'API
 const theArticles = async () => {
   let recoveryArticles = await fetch("http://localhost:3000/api/products");
@@ -6,11 +11,11 @@ const theArticles = async () => {
 
 // Ajout des données de l'API dans le DOM
 const listOfItems = async () => {
-  let results = await theArticles().then(function (resultatAPI) {
-    const articles = resultatAPI;
+  let results = await theArticles().then(function (repAPI) {
+    const articles = repAPI;
     console.table(articles);
     //Création d'une boucle for..in
-    for (let article in articles) {
+    for (let i in articles) {
       //lien
       let elementLink = document.createElement("a");
       let elementItems = document.getElementById("items");
