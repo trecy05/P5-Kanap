@@ -31,10 +31,14 @@ const listOfItems = async () => {
       elementImage.alt = repAPI[i].altTxt;
       //h3
       let elementTitle = document.createElement("h3");
-      elementImage.appendChild(elementTitle);
+      elementArticle.appendChild(elementTitle);
+      elementTitle.classList.add("elementTitle");
+      elementTitle.innerHTML = repAPI[i].name;
       //paragraphe
       let elementParagraphe = document.createElement("p");
-      elementTitle.appendChild(elementParagraphe);
+      elementArticle.appendChild(elementParagraphe);
+      elementParagraphe.classList.add("elementParagraphe");
+      elementParagraphe.innerHTML = repAPI[i].description;
     }
   });
 };
