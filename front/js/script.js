@@ -27,6 +27,8 @@ const listOfItems = async () => {
       // image
       let elementImage = document.createElement("img");
       elementArticle.appendChild(elementImage);
+      elementImage.src = repAPI[i].imageUrl;
+      elementImage.alt = repAPI[i].altTxt;
       //h3
       let elementTitle = document.createElement("h3");
       elementImage.appendChild(elementTitle);
