@@ -32,17 +32,17 @@ const listOfItems = async () => {
       //h3
       let elementTitle = document.createElement("h3");
       elementArticle.appendChild(elementTitle);
-      elementTitle.classList.add("elementTitle");
+      elementTitle.classList.add("productName");
       elementTitle.innerHTML = repAPI[i].name;
       //paragraphe
       let elementParagraphe = document.createElement("p");
       elementArticle.appendChild(elementParagraphe);
-      elementParagraphe.classList.add("elementParagraphe");
+      elementParagraphe.classList.add("productDescription");
       elementParagraphe.innerHTML = repAPI[i].description;
       //Prix
-      let elementPrice = document.createElement("price");
+      let elementPrice = document.createElement("p");
       elementArticle.appendChild(elementPrice);
-      elementPrice.classList.add("elementPrice");
+      elementPrice.classList.add("productPrice");
       elementPrice.innerHTML = repAPI[i].price;
     }
   });
