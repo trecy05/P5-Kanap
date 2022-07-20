@@ -1,8 +1,4 @@
-let link = window.location.href;
-let url = new URL(link);
-let idElement = url.searchParams.get("id");
-console.log(idElement);
-let produit = "";
+const idElement = window.location.search.split("?").join("");
 
 // Recuperation d'un element dans l'API
 const getElement = async () => {
@@ -10,3 +6,4 @@ const getElement = async () => {
     return res.json();
   });
 };
+console.log(idElement);
