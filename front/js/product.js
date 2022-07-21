@@ -1,7 +1,7 @@
 const queryString = window.location.href;
 const usp = new URL(queryString);
 const idElement = usp.searchParams.get("id");
-
+let element = [];
 console.log(idElement);
 
 // Recuperation d'un element dans l'API
