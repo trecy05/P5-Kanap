@@ -34,5 +34,13 @@ const articleDisplay = async () => {
   document.getElementById("description").innerHTML = `
   "${element.description}"
   `;
+  //Injection  des différentes couleurs
+  for (let colors of element.colors) {
+    console.table(colors);
+    let articleColors = document.createElement("option");
+    document.getElementById("colors").appendChild(articleColors);
+    articleColors.value = colors;
+    articleColors.innerHTML = colors;
+  }
 };
 articleDisplay();
