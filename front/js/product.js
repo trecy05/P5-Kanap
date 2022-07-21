@@ -15,4 +15,12 @@ const getElement = async () => {
       console.table(element);
     });
 };
-getElement();
+
+const articleDisplay = async () => {
+  await getElement();
+  //Injection de l'image
+  document.querySelector(".item__img").innerHTML = `
+  <img src="${element.imageUrl}" alt="${element.name}">
+  `;
+};
+articleDisplay();
