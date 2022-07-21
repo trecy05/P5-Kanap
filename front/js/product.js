@@ -18,9 +18,13 @@ const getElement = async () => {
 
 const articleDisplay = async () => {
   await getElement();
-  //Injection de l'image
+  //Injection de l'image dans le DOM
   document.querySelector(".item__img").innerHTML = `
   <img src="${element.imageUrl}" alt="${element.name}">
+  `;
+  //Injection du nom de l'article dans le DOM
+  document.getElementById("title").innerHTML = `
+  "${element.name}"
   `;
 };
 articleDisplay();
