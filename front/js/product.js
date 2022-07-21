@@ -26,8 +26,13 @@ const articleDisplay = async () => {
   document.getElementById("title").innerHTML = `
   "${element.name}"
   `;
+  //Injection du prix dans le DOM
   document.getElementById("price").innerHTML = `
   "${element.price}"
+  `;
+  //Injection de la description dans le DOM
+  document.getElementById("description").innerHTML = `
+  "${element.description}"
   `;
 };
 articleDisplay();
